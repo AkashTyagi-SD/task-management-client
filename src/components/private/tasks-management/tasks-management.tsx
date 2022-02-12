@@ -1,16 +1,18 @@
 import { FC } from "react";
 import ComponentHeader from "components/common/component-header/component-header";
 import { Title } from "./tasks-management-constant";
+import ListView from "components/common/list-view-component/listview-component";
 
 import classes from "./task-management.module.css";
+
+import { data } from "./tasks-management-constant";
 
 const Tasks: FC = () => {
   return (
     <>
       <ComponentHeader title={Title} />
       <div className={classes.container}>
-        <div className={classes.subcontainerleft}>Hello</div>
-        <div className={classes.subcontainerright}>Hi</div>
+        <ListView data={data} />
       </div>
     </>
   );

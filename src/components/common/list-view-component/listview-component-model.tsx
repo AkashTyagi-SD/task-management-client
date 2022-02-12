@@ -1,3 +1,3 @@
-export type Props = {
-  data: [];
+export type Props<T> = {
+  data: Array<T>;
 };
