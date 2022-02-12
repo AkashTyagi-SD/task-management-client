@@ -1,0 +1,50 @@
+{
+  "loginLabel": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter email",
+    "emailRequired": "Please input your E-mail!",
+    "emailFormate": "Email is incorrect",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter Password",
+    "passwordRequired": "Please input your Password!",
+    "loginTitle": "Welcome Back",
+    "rememberCheckbox": "Remember me",
+    "forgotpasswordText": "Forgot password",
+    "buttonLabel": "Sign in",
+    "noAlreadyAccountText": "Don't have already account?",
+    "signupSwitchLabel": "Sign up"
+  },
+  "userRegistration": {
+    "nameLabel": "Username",
+    "nameRequired": "Please input username",
+    "emailPlaceholder": "Email",
+    "emailRequired": "Please input your E-mail!",
+    "emailFormate": "Email is incorrect",
+    "createPasswordLabel": "Password",
+    "passwordRequired": "Please input your Password!",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordRequired": "Please input confirm Password!",
+    "confirmPasswordMismatch": "The two passwords that you entered do not match!",
+    "buttonLabel": "Sign up",
+    "alreadyAccountText": "Already account?",
+    "loginSwitchLabel": "Sign in",
+    "registrationTitle": "Registration Here"
+  },
+  "forgotPassword": {
+    "createPasswordLabel": "Password",
+    "passwordRequired": "Please input your Password!",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordRequired": "Please input confirm Password!",
+    "confirmPasswordMismatch": "The two passwords that you entered do not match!",
+    "buttonLabel": "Click here",
+    "alreadyAccountText": "Already account?",
+    "loginSwitchLabel": "Sign in",
+    "forgotPasswordTitle": "Forgot Password"
+  },
+  "publicHeader": {
+    "noAlreadyAccountText": "Don't have already account?",
+    "alreadyAccountText": "Already account?",
+    "loginSwitchLabel": "Sign in",
+    "signupSwitchLabel": "Sign up"
+  }
+}

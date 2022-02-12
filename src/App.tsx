@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FunctionComponent, useLayoutEffect, Suspense } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import PublicRoutes from "global/global-route";
+import { fetchStaticLabels } from "global/global-action";
+import { FetchLabelPayload } from "global/global-model";
+import { LABEL_PATH, LABEL_TYPE } from "global/global-constant";
+import { fetchStaticLabelSelector } from "global/global_selector";
+import AppLoader from "components/common/loader/app-loader";
+
+const App: FunctionComponent = () => {
+  const dispatch = useDispatch();
+
+  const { labels } = useSelector(fetchStaticLabelSelector);
+
+  useLayoutEffect(() => {
+    const payload: FetchLabelPayload = {
+      filePath: LABEL_PATH,
+      fileType: LABEL_TYPE,
+    };
+    dispatch(fetchStaticLabels(payload));
+  }, []);
+
+  return labels ? (
+    <>
+      <Suspense fallback={<AppLoader />}>
+        <PublicRoutes />
+      </Suspense>
+    </>
+  ) : (
+    <AppLoader />
   );
-}
+};
 
 export default App;

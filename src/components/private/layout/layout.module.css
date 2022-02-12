@@ -1,0 +1,18 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.subcontainer {
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site_layout .site_layout_background {
+  margin: "20px";
+  background-color: "white";
+}

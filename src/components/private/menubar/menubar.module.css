@@ -1,0 +1,9 @@
+.menubar {
+  color: 'dark';
+}
+
+@media (max-width: 650px) {
+  .menubar {
+    color: 'light';
+  }
+}

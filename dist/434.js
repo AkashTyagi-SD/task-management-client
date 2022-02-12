@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktask_management_client=self.webpackChunktask_management_client||[]).push([[434],{6434:function(e,n,t){t.r(n),t.d(n,{default:function(){return s}});var a=t(5893),s=()=>(0,a.jsx)("h2",{children:"Users"},void 0)}}]);

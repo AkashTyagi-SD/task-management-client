@@ -1,0 +1,93 @@
+.login_form {
+  width: 480px;
+  max-height: 75vh;
+  background: #fff;
+  box-shadow: 0 25px 75px rgba(16, 30, 54, 0.25);
+  border-radius: 6px;
+  padding: 35px 60px 35px;
+  margin-top: -75px;
+  position: relative;
+  overflow-y: auto;
+}
+.login_form_forgot {
+  float: right;
+}
+.ant-col-rtl .login_form_forgot {
+  float: left;
+}
+
+.login_form_button {
+  width: 100%;
+}
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Media Query for mobile device*/
+@media only screen and (max-width: 480px) {
+  .login_form {
+    width: 330px;
+    max-height: 75vh;
+    background: #fff;
+    box-shadow: 0 25px 75px rgba(16, 30, 54, 0.25);
+    border-radius: 6px;
+    padding: 35px 30px 35px;
+    margin-top: -75px;
+    position: relative;
+    overflow-y: auto;
+  }
+  .signup_text {
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .login_form {
+    width: 380px;
+    max-height: 75vh;
+    background: #fff;
+    box-shadow: 0 25px 75px rgba(16, 30, 54, 0.25);
+    border-radius: 6px;
+    padding: 35px 30px 35px;
+    margin-top: -75px;
+    position: relative;
+    overflow-y: auto;
+  }
+  .signup_text {
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login_form {
+    width: 420px;
+    max-height: 75vh;
+    background: #fff;
+    box-shadow: 0 25px 75px rgba(16, 30, 54, 0.25);
+    border-radius: 6px;
+    padding: 35px 30px 35px;
+    margin-top: -75px;
+    position: relative;
+    overflow-y: auto;
+  }
+  .signup_text {
+    display: none;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .signup_text {
+    display: none;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .signup_text {
+    display: none;
+  }
+}
