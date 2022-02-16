@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { List, Avatar, Button } from "antd";
+import { EditOutlined } from "@ant-design/icons";
 
 import { Props } from "./listview-component-model";
 import classes from "./listview-component.module.css";
@@ -14,16 +15,23 @@ const ListView: FC<Props<TasksModel>> = ({ data }) => {
       renderItem={(item) => (
         <List.Item
           key={item.id}
-          actions={[
-            <a key="list-loadmore-edit">edit</a>,
-            <a key="list-loadmore-more">more</a>,
-          ]}
+          actions={[<Button type="primary" icon={<EditOutlined />} />]}
         >
-          <div>{item.id}</div>
-          <div>{item.title}</div>
-          <div>{item.description}</div>
-          <div>{item.status}</div>
-          <div>{item.storyPoint}</div>
+          <List.Item.Meta
+            avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+            title={`Title: ${item.title}`}
+            description={
+              <div className={classes.container}>
+                <div className={classes.leftcontainer}>
+                  Description: {item.description}
+                </div>
+                <div className={classes.rightcontainer}>
+                  <div className={classes.statusOpen}>{item.status}</div>
+                  <div className={classes.storyPoint}>{item.storyPoint}d</div>
+                </div>
+              </div>
+            }
+          />
         </List.Item>
       )}
     />

@@ -1,3 +1,67 @@
 .demo_loadmore_list {
   min-height: 350px;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftcontainer {
+  display: flex;
+  width: 70%;
+  height: 5vh;
+  align-items: center;
+  justify-content: left;
+}
+.rightcontainer {
+  display: flex;
+  width: 30%;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.storyPoint {
+  font-size: small;
+  font-weight: bold;
+}
+.statusOpen {
+  width: 100px;
+  height: 30px;
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: orange;
+}
+
+.statusProgress {
+  width: 130px;
+  height: 30px;
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.statusDone {
+  width: 100px;
+  height: 30px;
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: green;
+}
