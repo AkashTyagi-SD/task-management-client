@@ -21,14 +21,14 @@ const { Title } = Typography;
 import classes from "./login.module.css";
 
 const Login: FC = () => {
-  const [cookies, setCookies] = useCookies([IS_LOGIN]);
+  const [cookies, setCookie, removeCookie] = useCookies([IS_LOGIN]);
   let navigate = useNavigate();
   const { isLoading, labels } = useSelector(fetchStaticLabelSelector);
 
   useEffect(() => {}, [isLoading]);
 
   const clickHandler = () => {
-    setCookies(IS_LOGIN, true, DEFAULT_COKKIES_VALUE);
+    setCookie(IS_LOGIN, true, DEFAULT_COKKIES_VALUE);
     navigate(ROUTE_DASHBOARD, { replace: true });
   };
 

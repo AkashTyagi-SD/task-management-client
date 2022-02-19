@@ -1,17 +1,17 @@
-// import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from "axios";
 
-//  import { AxiosConfig } from '@global/global-model';
-//  import { BASE_URL } from '@global/global-constant';
+import { AxiosConfig } from "global/global-model";
+import { BASE_URL } from "global/global-constant";
 
-// const axiosServiceConfig: AxiosConfig = {
-//   baseURL: BASE_URL,
-//   timeout: 50000,
-//   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-// };
+const axiosServiceConfig: AxiosConfig = {
+  baseURL: BASE_URL,
+  timeout: 50000,
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+};
 
-// const axiosServiceClient: AxiosInstance = axios.create(axiosServiceConfig);
+const axiosServiceClient: AxiosInstance = axios.create(axiosServiceConfig);
 
-// //Request interceptor
+//Request interceptor
 // axiosServiceClient.interceptors.request.use(
 //   (config) => {
 //     return config;
@@ -32,4 +32,4 @@
 //   }
 // );
 
-// export default axiosServiceClient;
+export default axiosServiceClient;

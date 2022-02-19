@@ -18,13 +18,13 @@ export const ROUTE_USERS = `${ROUTE_APP}users`;
 export const ROUTE_TASKS = `${ROUTE_APP}tasks`;
 // Routes
 
-export const IS_LOGIN = "is-login";
+export const IS_LOGIN: string = "login";
 
 export const DEFAULT_COKKIES_VALUE = {
   path: "/",
   maxAge: 3600,
 };
 
-//export const BASE_URL = `${process.env.BASE_URL}`;
+export const BASE_URL = `${process.env.REACT_APP_BASE_URL}`;
 export const LABEL_PATH = "../../public/static-label.json";
 export const LABEL_TYPE = "JSON";
