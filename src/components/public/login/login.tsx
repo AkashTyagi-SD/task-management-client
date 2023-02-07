@@ -1,8 +1,9 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect,Dispatch } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
-import { useSelector } from "react-redux";
+
+import { useSelector,connect } from "react-redux";
 import { Form, Input, Button, Checkbox, Typography } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 
@@ -15,17 +16,26 @@ import {
 } from "global/global-constant";
 
 import { fetchStaticLabelSelector } from "global/global_selector";
+import {FetchToDo} from './login_action';
+import {Props,DispatchToProps,StateToProps,DispatchToDoAction,FetchToDoSate} from './login_model';
 
 const { Title } = Typography;
 
 import classes from "./login.module.css";
 
-const Login: FC = () => {
+const Login: FC<Props> = ({FetchToDo,data,isLoading}) => {
   const [cookies, setCookie, removeCookie] = useCookies([IS_LOGIN]);
   let navigate = useNavigate();
-  const { isLoading, labels } = useSelector(fetchStaticLabelSelector);
+  const {labels } = useSelector(fetchStaticLabelSelector);
 
-  useEffect(() => {}, [isLoading]);
+  useEffect(() => {
+    FetchToDo();
+  }, []);
+
+  useEffect(()=>{
+console.log('dataaya',data);
+console.log('load',isLoading);
+  },[data,isLoading]);
 
   const clickHandler = () => {
     setCookie(IS_LOGIN, true, DEFAULT_COKKIES_VALUE);
@@ -103,4 +113,15 @@ const Login: FC = () => {
   );
 };
 
-export default Login;
+const mapStateToProps=({data,isLoading}:StateToProps):FetchToDoSate=>{
+return{
+  data:data,
+  isLoading:isLoading,
+}
+}
+
+const mapDispatchToProps=(dispatch:Dispatch<DispatchToDoAction>):DispatchToProps=>({
+  FetchToDo:():void=>dispatch(FetchToDo()),
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login);

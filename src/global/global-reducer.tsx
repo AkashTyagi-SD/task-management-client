@@ -6,6 +6,7 @@ import {
   FETCH_STATIC_LABELS_FAILURE,
 } from "./global-constant";
 import { GlobalActionType, GlobalState } from "./global-model";
+import todoList from '../components/public/login/login_reducer';
 
 const initialState: GlobalState = { isLoading: false };
 
@@ -33,6 +34,7 @@ export const staticLabel = (
 
 const rootReducer = combineReducers({
   staticLabel,
+  todoList
 });
 
 export type GlobalAppState = ReturnType<typeof rootReducer>;

@@ -8,6 +8,8 @@ import {
 import { FETCH_STATIC_LABELS } from "./global-constant";
 import { FetchStaticLabels, GlobalActionType } from "./global-model";
 import { fetchFileUtil } from "../util/fetch-file-util";
+import todoListGet from '../components/public/login/login_saga'; 
+
 
 export function* fetchStaticLabels({
   payload,
@@ -27,5 +29,7 @@ export function* globalSaga(): SagaIterator {
   yield takeLatest(FETCH_STATIC_LABELS, fetchStaticLabels);
 }
 export default function* rootSaga(): SagaIterator {
-  yield all([fork(globalSaga)]);
+  yield all([fork(globalSaga),
+  fork(todoListGet)
+  ]);
 }
